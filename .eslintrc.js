@@ -1,4 +1,6 @@
 module.exports = {
   extends: "@mate-academy/eslint-config",
-  ecmaVersion: 2020,
+  parserOptions: {
+    ecmaVersion: 2020,
+  },
 };

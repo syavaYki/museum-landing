@@ -1,11 +1,11 @@
 # Name of your workflow
 name: Build and Push to Deploy Branch
 
-# This action will trigger on every push to the 'main' branch
+# This action will trigger on every push to the 'master' branch
 on:
   push:
     branches:
-      - main
+      - master
 
 # Grant permissions for the GITHUB_TOKEN to push to the repository
 permissions:
@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Check out your repository code from the 'main' branch
+      # Step 1: Check out your repository code from the 'master' branch
       - name: Checkout Code
         uses: actions/checkout@v4
 
@@ -27,8 +27,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          cache: 'npm'
+          node-version: "18"
+          cache: "npm"
 
       # Step 3: Install dependencies
       - name: Install Dependencies
@@ -52,4 +52,4 @@ jobs:
           # The folder that contains your Parcel build artifacts
           publish_dir: ./dist
           # Add a custom commit message
-          commit_message: 'Deploying build from ${{ github.sha }}'
+          commit_message: "Deploying build from ${{ github.sha }}"

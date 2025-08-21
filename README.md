@@ -86,7 +86,7 @@ This will open the app in your default browser.
 
 In the project directory, you can run:
 
-- `npm start`: Runs the app in the development mode.
+- `npm start`: Runs the app in development mode.
 - `npm run build`: Builds the app for production to the `dist` folder.
 - `npm run lint`: Lints the code using ESLint, Prettier, and Stylelint.
 - `npm test`: Runs the linters.
